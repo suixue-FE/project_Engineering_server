@@ -23,11 +23,6 @@
   "engines": {
     "node": ">=10.0.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test"
-    }
-  },
   "scripts": {
     "start": "egg-scripts start --daemon --title=egg-server-project-server",
     "stop": "egg-scripts stop --title=egg-server-project-server",
@@ -39,6 +34,11 @@
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
     "autod": "autod"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
   },
   "ci": {
     "version": "10"
